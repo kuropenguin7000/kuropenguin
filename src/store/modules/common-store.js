@@ -1,6 +1,6 @@
 export default {
   state: {
-    hello: 'test'
+    hello: 'Kuropenguin'
   },
   getters: {
     getHello: state => state.hello
