@@ -1,13 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   padding: 0;
   margin: 0;
-  height: 100vh;
-  background: #ffffff;
+  background: linear-gradient(
+                  calc(var(--angle) * 14deg),
+                  var(--bg-one) calc(40 * 1%),
+                  var(--bg-two) calc(40 * 1%)
+  );
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   --transition: 0.2s;
-  --bg-one: hsl(280, 60%, 5%);
-  --bg-two: hsl(280, 90%, 15%);
+  --bg-one: rgb(4, 27, 35);
+  --bg-two: rgb(8 145 178);
   --stop: 40%;
   --angle: 45;
   --border-width: 5;
@@ -16,5 +22,6 @@
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
 }

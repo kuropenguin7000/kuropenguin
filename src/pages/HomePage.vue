@@ -12,5 +12,16 @@ const { getHello } = mapGetters()
 
 <style lang="scss" scoped>
 .home-page {
+  .gambar {
+    min-height: 50vh;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    background-image: url("@/assets/list-kue-lebaran.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
+  }
 }
 </style>

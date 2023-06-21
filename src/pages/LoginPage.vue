@@ -1,42 +1,67 @@
 <template>
-  <div class="login-container">
-    <form @submit.prevent="onSubmit">
-      <label for="password">Password</label>
-      <input
-        id="password"
-        type="password"
-        pattern="01072023"
-        placeholder="Enter your password"
-        required
-      />
-      <input id="login" type="checkbox" />
-      <label class="login-button" for="login" @click="onRouteToHomePage">
-        <span>Enter</span>
-        <svg>
-          <path
-            d="M10,17V14H3V10H10V7L15,12L10,17M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V16H7V20H17V4H7V8H5V4A2,2 0 0,1 7,2Z"
-          ></path>
-        </svg>
-      </label>
-      <div class="padlock">
-        <div class="padlock__hook">
-          <div class="padlock__hook-body"></div>
-          <div class="padlock__hook-body"></div>
+  <div>
+    <div
+      class="mx-3 my-10 rounded-sm border-2 border-gold-lock-100 px-2 py-5 md:mx-20 md:my-36 md:rounded-none md:px-10 md:pt-10 md:outline md:outline-2 md:outline-offset-16 md:outline-gold-lock-200 xl:mx-36"
+    >
+      <div class="flex flex-col items-center justify-center text-cyan-50 xl:flex-row xl:gap-10">
+        <div class="text-center text-5xl lg:text-7xl">
+          <div>Karina</div>
+          <div>Dwi</div>
+          <div>Pujiani</div>
         </div>
-        <div class="padlock__body">
-          <div class="padlock__face">
-            <div class="padlock__eye padlock__eye--left"></div>
-            <div class="padlock__eye padlock__eye--right"></div>
-            <div class="padlock__mouth padlock__mouth--one"></div>
-            <div class="padlock__mouth padlock__mouth--two"></div>
-            <div class="padlock__mouth padlock__mouth--three"></div>
-          </div>
+        <div class="text-9xl text-cyan-950 xl:text-[20rem]">&</div>
+        <div class="text-center text-5xl lg:text-7xl">
+          <div>Takwa</div>
+          <div>Hardika</div>
         </div>
       </div>
-    </form>
-    <div class="password-hint">
-      Pspspsps! The password is the day, month, & year of our wedding!
-      (ddmmyyyy)
+      <div class="login-input">
+        <form @submit.prevent="onSubmit">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            pattern="01072023"
+            placeholder="Enter your password"
+            title="01072023"
+            required
+            autocomplete="on"
+            class="w-11/12 md:w-full"
+          />
+          <input id="login" type="checkbox" />
+          <label
+            class="login-button w-11/12 md:w-full"
+            for="login"
+            @click="onRouteToHomePage"
+          >
+            <span>Enter</span>
+            <svg>
+              <path
+                d="M10,17V14H3V10H10V7L15,12L10,17M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V16H7V20H17V4H7V8H5V4A2,2 0 0,1 7,2Z"
+              ></path>
+            </svg>
+          </label>
+          <div class="padlock">
+            <div class="padlock__hook">
+              <div class="padlock__hook-body"></div>
+              <div class="padlock__hook-body"></div>
+            </div>
+            <div class="padlock__body">
+              <div class="padlock__face">
+                <div class="padlock__eye padlock__eye--left"></div>
+                <div class="padlock__eye padlock__eye--right"></div>
+                <div class="padlock__mouth padlock__mouth--one"></div>
+                <div class="padlock__mouth padlock__mouth--two"></div>
+                <div class="padlock__mouth padlock__mouth--three"></div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="text-center text-cyan-100 md:text-2xl lg:text-3xl xl:text-4xl">
+          Pspspsps! The password is the day, month, & year of our wedding!
+          (ddmmyyyy)
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -61,33 +86,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-
-.password-hint {
-  color: #eceff1;
-  @media screen and (max-width: 600px) {
-    width: 75%;
-    text-align: center;
-  }
-}
-
-.login-container {
+.login-input {
   align-items: center;
   display: flex;
   gap: 1rem;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
   font-family: sans-serif;
-  background: linear-gradient(
-    calc(var(--angle) * 1deg),
-    var(--bg-one) calc(40 * 1%),
-    var(--bg-two) calc(40 * 1%)
-  );
 }
 
 form {
@@ -107,7 +112,6 @@ form {
   border-radius: calc(var(--border-radius) * 1px);
   text-align: center;
   outline: transparent;
-  width: 100%;
   transition: border-color calc(var(--transition, 0.2s) * 1s) ease;
 
   &:valid {
@@ -182,7 +186,6 @@ form {
   text-transform: uppercase;
   font-weight: bold;
   color: #fff;
-  width: 100%;
   transition: background calc(var(--transition, 0.2s) * 1s) ease;
 
   svg {
