@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .nav-label {
+      @apply mx-8 flex py-2 text-base text-slate-800 group-hover:text-cyan-500 md:text-2xl;
+    }
+}
 :root {
   padding: 0;
   margin: 0;

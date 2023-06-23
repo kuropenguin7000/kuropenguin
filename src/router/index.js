@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const HomePage = () => import('@/pages/HomePage.vue')
 const LoginPage = () => import('@/pages/LoginPage.vue')
+const SchedulePage = () => import('@/pages/SchedulePage.vue')
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     path: '/home',
     name: 'Home Page',
     component: HomePage
+  },
+  {
+    path: '/schedule',
+    name: 'Schedule',
+    component: SchedulePage
   }
 ]
 

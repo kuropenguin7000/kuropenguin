@@ -79,7 +79,9 @@ export default {
       return false
     },
     onRouteToHomePage() {
-      this.$router.push('/home')
+      this.$router.push({
+        name: 'Home Page'
+      })
     }
   }
 }
