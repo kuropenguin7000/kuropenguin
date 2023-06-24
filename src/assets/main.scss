@@ -4,8 +4,19 @@
 
 @layer components {
     .nav-label {
-      @apply mx-8 flex py-2 text-base text-slate-800 group-hover:text-cyan-500 md:text-2xl;
+      @apply mx-8 flex py-2 text-base text-slate-800 group-hover:text-cyan-500 md:text-lg;
     }
+}
+@keyframes gradient-animation {
+  0% {
+    background-image: linear-gradient(to right, #4fd1c5, #63b3ed);
+  }
+  50% {
+    background-image: linear-gradient(to right, #805ad5, #d53f8c);
+  }
+  100% {
+    background-image: linear-gradient(to right, #4fd1c5, #63b3ed);
+  }
 }
 :root {
   padding: 0;

@@ -3,7 +3,9 @@
     <div
       class="mx-3 my-10 rounded-sm border-2 border-gold-lock-100 px-2 py-5 md:mx-20 md:my-36 md:rounded-none md:px-10 md:pt-10 md:outline md:outline-2 md:outline-offset-16 md:outline-gold-lock-200 xl:mx-36"
     >
-      <div class="flex flex-col items-center justify-center text-cyan-50 xl:flex-row xl:gap-10">
+      <div
+        class="flex flex-col items-center justify-center text-cyan-50 xl:flex-row xl:gap-10"
+      >
         <div class="text-center text-5xl lg:text-7xl">
           <div>Karina</div>
           <div>Dwi</div>
@@ -57,7 +59,9 @@
             </div>
           </div>
         </form>
-        <div class="text-center text-cyan-100 md:text-2xl lg:text-3xl xl:text-4xl">
+        <div
+          class="text-center text-cyan-100 md:text-2xl lg:text-3xl xl:text-4xl"
+        >
           Pspspsps! The password is the day, month, & year of our wedding!
           (ddmmyyyy)
         </div>
@@ -67,6 +71,7 @@
 </template>
 
 <script>
+import musicFile from '@/assets/sound/jvke-golden-hour.mp3'
 export default {
   name: 'LoginPage',
   data() {
@@ -82,6 +87,11 @@ export default {
       this.$router.push({
         name: 'Home Page'
       })
+      this.playMusic()
+    },
+    playMusic() {
+      const audio = new Audio(musicFile)
+      audio.play()
     }
   }
 }

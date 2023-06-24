@@ -39,6 +39,11 @@ export default {
       this.$router.push({
         name: 'Schedule'
       })
+    },
+    onClickToLogin() {
+      this.$router.push({
+        name: 'Login'
+      })
     }
   }
 }

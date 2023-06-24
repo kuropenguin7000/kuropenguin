@@ -21,6 +21,7 @@
           <div class="cursor-pointer">Travel</div>
           <div class="cursor-pointer">Honeymoon Fund</div>
           <div class="cursor-pointer">Photos</div>
+          <div class="cursor-pointer" @click="onClickToLogin">Logout</div>
         </div>
         <div class="flex items-center px-4 lg:hidden">
           <button
@@ -58,6 +59,9 @@
               </li>
               <li class="group">
                 <a class="nav-label">Photos</a>
+              </li>
+              <li class="group">
+                <a class="nav-label" @click="onClickToLogin">Logout</a>
               </li>
             </ul>
           </nav>
